@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GildedRose.Console</RootNamespace>
     <AssemblyName>GildedRose.Console</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GildedRose.Console.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,6 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemUpdaters\AgedBrieUpdater.cs" />
+    <Compile Include="ItemUpdaters\BackstagePassUpdater.cs" />
+    <Compile Include="ItemUpdaters\ConjuredItemUpdater.cs" />
+    <Compile Include="ItemUpdaters\IItemUpdater.cs" />
+    <Compile Include="ItemUpdaters\CustomItemUpdaterAttribute.cs" />
+    <Compile Include="ItemUpdaters\RegularItemUpdater.cs" />
+    <Compile Include="ItemUpdaters\SulfurasUpdater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
